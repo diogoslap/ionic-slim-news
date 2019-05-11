@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let new of news">
+    <ion-card-header>
+      <ion-card-title>
+        {{new.title}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        {{new.description}}
+      </p>
+    </ion-card-content>
+    <ion-row padding>
+        <ion-col align-self-left text-left col-4>
+          <ion-note>
+            Author:{{new.author.name}}
+          </ion-note>
+        </ion-col>
+        <ion-col align-self-right text-right col-8>
+          <ion-note>
+            Published:{{new.created.date | date:"dd/MM/y HH:mm"}}
+          </ion-note>
+        </ion-col>
+      </ion-row>
+  </ion-card>
+</ion-content>

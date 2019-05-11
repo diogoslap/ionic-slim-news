@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content
+  fullscreen
+  elestic-header
+  parallax-header
+  no-bounce
+  padding
+  class="bg-modal"
+>
+  <div class="main-content" text-wrap text-center *ngIf="user">
+    <h2>{{ user.username }}</h2>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <button ion-button (click)="logout()" full clear color="light">
+      Logout
+    </button>
+  </ion-toolbar>
+</ion-footer>

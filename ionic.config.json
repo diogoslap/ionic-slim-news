@@ -1,6 +1,8 @@
 {
-  "name": "ionic-news",
+  "name": "ionic-slim-news",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
